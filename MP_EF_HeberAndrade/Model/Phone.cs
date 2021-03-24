@@ -1,8 +1,7 @@
-﻿
+﻿namespace MP_EF_HeberAndrade
 
-namespace MP_EF_HeberAndrade.AssetsModel
 {
-    class Phone
+    public class Phone : Asset
     {
         public Phone(string brand, string modelName, int purchaseDate, int inicialCost, int expiredDate, int expiredCost)
         {
@@ -13,15 +12,6 @@ namespace MP_EF_HeberAndrade.AssetsModel
             ExpiredDate = expiredDate;
             ExpiredCost = expiredCost;
         }
-
-        public string Brand { get; set; }
-        public string ModelName { get; set; }
-        public int PurchaseDate { get; set; }
-        public int InicialCost { get; set; }
-        public int ExpiredDate { get; set; }
-        public int ExpiredCost { get; set; }
-
+        public int Id { get; set; }
     }
-
-}
-
+ }
