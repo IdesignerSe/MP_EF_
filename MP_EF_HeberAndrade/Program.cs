@@ -46,29 +46,6 @@ namespace MP_EF_HeberAndrade
                 Console.Write($"\nYou have asked for : " + " *** " + itemName + " *** ");
                 Console.ResetColor();
 
-                
-
-                Console.WriteLine($"\n\nOur actual Inventory is : \n");
-                Console.WriteLine($">.............................................................<\n");
-
-
-                Console.WriteLine($"\n\n\nENTER 'q' TO QUIT.\n");
-
-                while (true)
-                {
-
-                    string insert = Console.ReadLine();
-
-                    if (insert == "q")
-                    {
-                        Console.WriteLine("\nBye, Thanks for your visit!\n");
-                        break;
-                    }
-
-                    if (insert != "q")
-                    {
-                    }
-                }
                 // (string brand, string modelName, int purchaseDate, int inicialCost, int expiredDate, int expiredCost)
                 // new Asset("MacBook", "Pro 2018 15 inch ", 20180101, 13000, 20211201, 8000),
                 dbContext.Add(new Computer("MacBook", "Pro 2018 15 inch ", 20180101, 13000, 20211201, 8000));
@@ -87,7 +64,31 @@ namespace MP_EF_HeberAndrade
                 //                       "(total diets: " + d.Count() + ")"
                 //                   );
                 //               Console.WriteLine(string.Join(", ", result));
-                //               Console.WriteLine(string.Join(", ", resultSum));
+                //  
+              //  Console.WriteLine(string.Join(", ", resultSum));
+
+                Console.WriteLine($"\n\nOur actual Inventory is : \n");
+                Console.WriteLine($">.............................................................<\n");
+
+
+                Console.WriteLine($"\n\n\nENTER 'q' TO QUIT.\n");
+
+                while (true)
+                {
+
+                   string insert = Console.ReadLine();
+
+                    if (insert == "q")
+                    {
+                        Console.WriteLine("\nBye, Thanks for your visit!\n");
+                        break;
+                    }
+
+                    if (insert != "q")
+                    {
+                    }
+                }
+
 
             }
         }
