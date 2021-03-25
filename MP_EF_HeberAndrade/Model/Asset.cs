@@ -4,9 +4,6 @@
 
     public class Asset
     {
-     
-
-
         public string Brand { get; set; }
         public string ModelName { get; set; }
         public int PurchaseDate { get; set; }
