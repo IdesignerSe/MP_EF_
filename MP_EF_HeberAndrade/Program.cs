@@ -36,7 +36,7 @@ namespace MP_EF_HeberAndrade
 
                 computers.Add(computerItem);
                 computers.Add(computerItem2);
-    //            computers = AssetsContext.Computers.ToList();
+                computers = dbContext.Computers.ToList();
 
                 Dictionary<string, int> colWidths = new Dictionary<string, int>();
 
