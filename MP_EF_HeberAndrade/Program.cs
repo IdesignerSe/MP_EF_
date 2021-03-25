@@ -9,7 +9,7 @@ namespace MP_EF_HeberAndrade
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hi here all the assets!");
+            
             using (var dbContext = new AssetsContext())
             {
                 string itemName;
