@@ -21,7 +21,6 @@ namespace MP_EF_HeberAndrade
                 Header("Update Item");
                 ShowAllComputers();
 
-
                 Computer computerItem = new Computer("MacBook", "2018 15 inch ", 20180101, 13000, 20211201, 8000);
                 string classBrand = computerItem.GetType().Name;
                 PropertyInfo brand = computerItem.GetType().GetProperty("Brand");
