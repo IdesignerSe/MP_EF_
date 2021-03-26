@@ -4,8 +4,9 @@
     public class Computer : Asset
     {
  
-        public Computer(string brand, string modelName, int purchaseDate, int inicialCost, int expiredDate, int expiredCost)
+        public Computer(int id, string brand, string modelName, int purchaseDate, int inicialCost, int expiredDate, int expiredCost)
         {
+            Id = id;
             Brand = brand;
             ModelName = modelName;
             PurchaseDate = purchaseDate;
@@ -13,6 +14,5 @@
             ExpiredDate = expiredDate;
             ExpiredCost = expiredCost;
         }
-        public int Id { get; set; }
     }
 }

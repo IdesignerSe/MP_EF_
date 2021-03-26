@@ -3,8 +3,9 @@
 {
     public class Tv : Asset
     {
-        public Tv(string brand, string modelName, int purchaseDate, int inicialCost, int expiredDate, int expiredCost)
+        public Tv(int id, string brand, string modelName, int purchaseDate, int inicialCost, int expiredDate, int expiredCost)
         {
+            Id = id;
             Brand = brand;
             ModelName = modelName;
             PurchaseDate = purchaseDate;
@@ -12,6 +13,5 @@
             ExpiredDate = expiredDate;
             ExpiredCost = expiredCost;
         }
-        public int Id { get; set; }
     }
  }
