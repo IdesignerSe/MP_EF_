@@ -13,23 +13,18 @@ namespace MP_EF_HeberAndrade
             using (var dbContext = new AssetsContext())
             {
 
+                // void Run()
+                //{
+                //    Functions.ClearDatabase();                
+                //    Functions.AddComputers();                
+                //}
+
+                //Header("Update Item");
+
                 Computer computerItem = new Computer("MacBook", "2018 15 inch ", 20180101, 13000, 20211201, 8000);
                 string classBrand = computerItem.GetType().Name;
                 PropertyInfo brand = computerItem.GetType().GetProperty("Brand");
                 List<PropertyInfo> properties = computerItem.GetType().GetProperties().ToList();
-
-
-                //foreach(PropertyInfo property in properties)
-                //{
-                //    Console.Write(property.Name.PadRight(property.Name.Length + 7));
-                //}
-
-                //Console.WriteLine();
-
-                //foreach (PropertyInfo property in properties)
-                //{
-                //        Console.Write(property.GetValue(computerItem).ToString().PadRight(property.GetValue(computerItem).ToString().Length + 7));
-                //}
 
                 Computer computerItem2 = new Computer("MacBook", "2019 15 inch ", 20180101, 16000, 20211201, 10000);
                 List<Computer> computers = new List<Computer>();
@@ -75,42 +70,16 @@ namespace MP_EF_HeberAndrade
                         Console.Write(c.GetValue(computer).ToString().PadRight(colWidth.Value + 2));
                     }
                     Console.WriteLine();
-
                 }
 
-
-
-
-
-                //Computer computer1 = new Computer("MacBook", "Pro 2018 15 inch ", 20180101, 13000, 20211201, 8000);
-
-                //dbContext.Add(computer1);
-                //dbContext.SaveChanges();
-
-
-                //Computer computer2 = new Computer("MacBook", "Pro 2019 15 inch ", 20180101, 16000, 20211201, 10000);
-                //Computer computer3 = new Computer("MacBook", "Pro 2020 15 inch ", 20180101, 18000, 20211201, 13000);
-
-
-                //dbContext.Computers.AddRange(computer2,computer3);
-                //Computer computer4 = new Computer("MacBook", "Pro 2020 15 inch ", 20180101, 18000, 20211201, 13000);
-                //dbContext.Add(computer4);
-
-                //dbContext.SaveChanges();
-
-
-
-
-
-                //(string brand, string modelName, int purchaseDate, int inicialCost, int expiredDate, int expiredCost)
-                // new Asset("MacBook", "Pro 2018 15 inch ", 20180101, 13000, 20211201, 8000),
-                // dbContext.Add(new Computer("MacBook", "Pro 2018 15 inch ", 20180101, 13000, 20211201, 8000));
-
-                //// dbContext.SaveChanges();
-
-                // var result = dbContext.Computers.ToList()
-                //                   .Select(d => d.Brand);
-                // Console.WriteLine(string.Join(", ", result));;
+                void Header(string text)
+                {
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine();
+                    Console.WriteLine(text.ToUpper());
+                    Console.WriteLine();
+                }
 
             }
         }
