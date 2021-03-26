@@ -13,13 +13,14 @@ namespace MP_EF_HeberAndrade
             using (var dbContext = new AssetsContext())
             {
 
-                // void Run()
-                //{
-                //    Functions.ClearDatabase();                
-                //    Functions.AddComputers();                
-                //}
+                void Run()
+                {
+                    Functions.ClearDatabase();
+                    Functions.AddComputers();
+                }
 
-                //Header("Update Item");
+                Header("Update Item");
+                ShowAllComputers();
 
                 Computer computerItem = new Computer("MacBook", "2018 15 inch ", 20180101, 13000, 20211201, 8000);
                 string classBrand = computerItem.GetType().Name;
@@ -72,14 +73,53 @@ namespace MP_EF_HeberAndrade
                     Console.WriteLine();
                 }
 
+
                 void Header(string text)
                 {
                     Console.Clear();
-                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine();
                     Console.WriteLine(text.ToUpper());
                     Console.WriteLine();
                 }
+
+                void WriteLine(string text = "")
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine(text);
+                }
+
+                void Write(string text)
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.Write(text);
+                }
+
+
+                void ShowAllComputers()
+                {
+                    //foreach (Computer computer in computers)
+                    //{
+                    //    foreach (var colWidth in colWidths)
+                    //    {
+                    //        var c = computer.GetType().GetProperties().Where(c => c.Name == colWidth.Key).FirstOrDefault();
+                    //        Console.Write(c.GetValue(computer).ToString().PadRight(colWidth.Value + 2));
+                    //    }
+                    //    Console.WriteLine();
+                    //}
+
+
+                    foreach (var x in dbContext.Computers)
+                    {
+                        WriteLine(x.Id.ToString().PadRight(5) + x.Brand.PadRight(30));
+                    }
+                }
+
+                //void Write(string text = "")
+                //{
+                //    Console.ForegroundColor = ConsoleColor.Blue;
+                //    Console.WriteLine(text);
+                //}
 
             }
         }

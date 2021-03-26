@@ -1,9 +1,9 @@
 ﻿
 USE AssetsCatalog
 
-INSERT INTO BlogPost (Author, Title) 
-VALUES ('Lily', 'The sun is bright')
+INSERT INTO Computer (Branch, ModelName) 
+VALUES ('NoteBook', 'Acromat Flyer')
 
-INSERT INTO BlogPost (Author, Title) 
-VALUES ('Ethan', 'I will go swimming')
+INSERT INTO Computer (Branch, ModelName) 
+VALUES ('ChromeBook', 'ChromeCast')
 

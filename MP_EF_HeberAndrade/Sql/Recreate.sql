@@ -3,15 +3,15 @@ CREATE DATABASE AssetsCatalog
 
 GO
 
-USE BlogPostDemo
+USE AssetCatalog
 
-DROP TABLE IF EXISTS BlogPost
+DROP TABLE IF EXISTS Computers
 
-CREATE TABLE BlogPost
+CREATE TABLE Computers
 (
 	Id INT IDENTITY(1,1) PRIMARY KEY,
-    Title NVARCHAR(50) NULL,
-	Author NVARCHAR(50) NULL,
+    Branch NVARCHAR(50) NULL,
+	ModelName NVARCHAR(50) NULL,
 )
 
 GO

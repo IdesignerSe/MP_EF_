@@ -1,4 +1,4 @@
 ﻿
 USE AssetsCatalog
 
-SELECT * FROM BlogPost
+SELECT * FROM Asset
