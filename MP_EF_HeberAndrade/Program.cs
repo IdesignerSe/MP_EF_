@@ -12,7 +12,6 @@ namespace MP_EF_HeberAndrade
         {
             using (var dbContext = new AssetsContext())
             {
-
                 void Run()
                 {
                     Functions.ClearDatabase();
@@ -21,6 +20,7 @@ namespace MP_EF_HeberAndrade
 
                 Header("Update Item");
                 ShowAllComputers();
+
 
                 Computer computerItem = new Computer("MacBook", "2018 15 inch ", 20180101, 13000, 20211201, 8000);
                 string classBrand = computerItem.GetType().Name;
@@ -96,23 +96,26 @@ namespace MP_EF_HeberAndrade
                 }
 
 
+                //void ShowAllComputers()
+                //{
+                //    foreach (Computer computer in computers)
+                //    {
+                //        foreach (var colWidth in colWidths)
+                //        {
+                //            var c = computer.GetType().GetProperties().Where(c => c.Name == colWidth.Key).FirstOrDefault();
+                //            Console.Write(c.GetValue(computer).ToString().PadRight(colWidth.Value + 2));
+                //        }
+                //        Console.WriteLine();
+                //    }
+                //}
+
                 void ShowAllComputers()
                 {
-                    //foreach (Computer computer in computers)
-                    //{
-                    //    foreach (var colWidth in colWidths)
-                    //    {
-                    //        var c = computer.GetType().GetProperties().Where(c => c.Name == colWidth.Key).FirstOrDefault();
-                    //        Console.Write(c.GetValue(computer).ToString().PadRight(colWidth.Value + 2));
-                    //    }
-                    //    Console.WriteLine();
-                    //}
-
-
                     foreach (var x in dbContext.Computers)
                     {
                         WriteLine(x.Id.ToString().PadRight(5) + x.Brand.PadRight(30));
                     }
+                    Console.WriteLine();
                 }
 
                 //void Write(string text = "")
